@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Forma De Pago </h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -29,9 +29,9 @@
             @Html.DisplayFor(modelItem => item.pago_Name)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id_Pago }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id_Pago }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id_Pago })
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id_Pago }, new { @class = "btn btn-primary" }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id_Pago }, new { @class = "btn btn-info" }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id_Pago }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }

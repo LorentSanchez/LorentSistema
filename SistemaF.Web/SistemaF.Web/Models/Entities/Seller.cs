@@ -9,7 +9,7 @@ namespace Sistema.Web.Data.Entities
 {
     public class Seller
     {
-        /// NO VI SU RELACION EN LAS FOTO PERO ENTIENDO QUE LO PUEDES RELACIONAR CON SUPLIDOR Y ARTICULOS 
+        
         [Key]
         public int Seller_Id { get; set; }
 

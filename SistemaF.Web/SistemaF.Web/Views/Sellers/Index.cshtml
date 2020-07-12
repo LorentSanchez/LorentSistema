@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Vendedor</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -65,9 +65,9 @@
             @Html.DisplayFor(modelItem => item.Email)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Seller_Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Seller_Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Seller_Id })
+            @Html.ActionLink("Edit", "Edit", new { id=item.Seller_Id }, new { @class = "btn btn-primary" }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Seller_Id }, new { @class = "btn btn-info" }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Seller_Id }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }

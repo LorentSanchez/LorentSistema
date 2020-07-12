@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Tipo De Modena </h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -35,9 +35,9 @@
             @Html.DisplayFor(modelItem => item.Nmoneda)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Moneda_Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Moneda_Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Moneda_Id })
+            @Html.ActionLink("Edit", "Edit", new { id=item.Moneda_Id }, new { @class = "btn btn-primary" }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Moneda_Id }, new { @class = "btn btn-info" }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Moneda_Id }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }
