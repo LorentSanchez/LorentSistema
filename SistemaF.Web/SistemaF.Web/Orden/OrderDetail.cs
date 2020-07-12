@@ -9,12 +9,12 @@ namespace Sistema.Web.Data.OrdenTemp
 {
     public class OrderDetail
     {
+        
         [Key]
-       
-
+        public int OrderDetail_Id { get; set; }
         public int OrderID { get; set; }
 
-        public int ProductID { get; set; }
+        public int ArtC_Id { get; set; }
 
         public string Descripcion { get; set; }
 
@@ -24,11 +24,11 @@ namespace Sistema.Web.Data.OrdenTemp
 
         [DataType(DataType.Currency)]
         [DisplayFormat(DataFormatString = "{0:n2}", ApplyFormatInEditMode = false)]
-        public float Quantity { get; set; }
+        public float Cantidad { get; set; }
 
         public virtual Order Orders { get; set; }
         [DisplayFormat(DataFormatString = "{0:C2}")]
-        public decimal Value { get { return this.OrderPrice * (decimal)this.Quantity; } }
+        public decimal Valor { get { return this.OrderPrice * (decimal)this.Cantidad; } }
 
 
 

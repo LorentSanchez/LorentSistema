@@ -5,14 +5,13 @@ using System.Threading.Tasks;
 
 namespace Sistema.Web.Data.Orden
 {
-    public class OrdenStatud
-    {
-        public enum OrderStatus
+    
+        public enum OrdenStatud
         {
             Created,
             InProgress,
             Shipped,
             Delivered
         }
-    }
+    
 }

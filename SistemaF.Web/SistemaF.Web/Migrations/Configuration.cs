@@ -9,7 +9,7 @@ namespace SistemaF.Web.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(Sistema.Web.Data.DataContext context)
