@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Sistema.Web.Data.Entities.Moneda>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name_moneda)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tasa_moneda)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nmoneda)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name_moneda)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tasa_moneda)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nmoneda)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Moneda_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Moneda_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Moneda_Id })
+        </td>
+    </tr>
+}
+
+</table>

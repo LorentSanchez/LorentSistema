@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Sistema.Web.Data.Entities.Supplier>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Neighborhood.Neighborhood_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Supplier_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Numero)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SupplierC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.correo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name_contacta)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Neighborhood.Neighborhood_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Supplier_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Numero)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SupplierC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.correo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name_contacta)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Supplier_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Supplier_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Supplier_Id })
+        </td>
+    </tr>
+}
+
+</table>

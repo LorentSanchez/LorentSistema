@@ -1,0 +1,26 @@
+﻿@model Sistema.Web.Data.Entities.Company_Classification
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Company_Classification</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyClass_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyClass_Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CompanyClass_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

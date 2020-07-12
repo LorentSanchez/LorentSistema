@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Sistema.Web.Data.Entities.Company>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Company_Classification.CompanyClass_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Document.Documento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Neighborhood.Neighborhood_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Company_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Document_Code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.correo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phone)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Company_Classification.CompanyClass_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Document.Documento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Neighborhood.Neighborhood_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Company_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Document_Code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.correo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phone)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Company_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Company_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Company_Id })
+        </td>
+    </tr>
+}
+
+</table>

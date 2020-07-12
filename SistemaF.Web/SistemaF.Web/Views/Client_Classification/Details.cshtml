@@ -1,0 +1,26 @@
+﻿@model Sistema.Web.Data.Entities.Client_Classification
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Client_Classification</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientClass_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientClass_Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ClientClass_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

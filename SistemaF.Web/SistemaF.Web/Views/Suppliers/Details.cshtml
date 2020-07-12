@@ -1,0 +1,74 @@
+﻿@model Sistema.Web.Data.Entities.Supplier
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Supplier</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Neighborhood.Neighborhood_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Neighborhood.Neighborhood_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Supplier_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Supplier_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Numero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplierC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupplierC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.correo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.correo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.name_contacta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name_contacta)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Supplier_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

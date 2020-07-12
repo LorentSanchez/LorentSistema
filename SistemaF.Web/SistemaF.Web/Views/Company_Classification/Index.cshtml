@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Sistema.Web.Data.Entities.Company_Classification>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CompanyClass_Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompanyClass_Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CompanyClass_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CompanyClass_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CompanyClass_Id })
+        </td>
+    </tr>
+}
+
+</table>

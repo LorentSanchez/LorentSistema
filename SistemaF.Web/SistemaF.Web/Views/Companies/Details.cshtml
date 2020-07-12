@@ -1,0 +1,82 @@
+﻿@model Sistema.Web.Data.Entities.Company
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Company</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Company_Classification.CompanyClass_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Company_Classification.CompanyClass_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Document.Documento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Document.Documento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Neighborhood.Neighborhood_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Neighborhood.Neighborhood_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Company_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Company_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Document_Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Document_Code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.correo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.correo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phone)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Company_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
