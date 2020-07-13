@@ -36,7 +36,9 @@ namespace Sistema.Web.Data
         public DbSet<Sistema.Web.Data.Entities.Company_Classification> Company_Classification { get; set; }
         public DbSet<Sistema.Web.Data.OrdenTemp.Order> Order { get; set; }
         public DbSet<Sistema.Web.Data.OrdenTemp.OrderDetail> OrderDetail { get; set; }
-       // public DbSet<Sistema.Web.Data.Orden.OrdenStatud> OrdenStatuds { get; set; }
+
+        public System.Data.Entity.DbSet<Sistema.Web.Data.Orden.ProductOrder> Articles { get; set; }
+        // public DbSet<Sistema.Web.Data.Orden.OrdenStatud> OrdenStatuds { get; set; }
 
 
     }

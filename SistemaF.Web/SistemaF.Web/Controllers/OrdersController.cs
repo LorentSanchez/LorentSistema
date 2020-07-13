@@ -6,7 +6,6 @@ using Sistema.Web.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace SistemaF.Web.Controllers
@@ -94,7 +93,7 @@ namespace SistemaF.Web.Controllers
                     {
                         var orderDetail = new OrderDetail
                         {
-                            ArtC_Id = item.ArtC_Id,
+                            ArtC_Id = item.Article_Id,
                             Descripcion = item.Article_Name,
                             OrderPrice = (int)item.Price,
                             Cantidad = item.Quantity,
@@ -137,7 +136,7 @@ namespace SistemaF.Web.Controllers
         public ActionResult AddProduct()
         {
             var list = db.Article.ToList();
-            list.Add(new ProductOrder { ArtC_Id = 0, Article_Name = "[Seleccione un Producto...]" });
+            list.Add(new ProductOrder { Article_Id = 0, Article_Name = "[Seleccione un Producto...]" });
             list = list.OrderBy(c => c.Article_Name).ToList();
             ViewBag.ArtC_Id = new SelectList(list, "ArtC_Id", "Article_Name");
             return View();
@@ -147,8 +146,8 @@ namespace SistemaF.Web.Controllers
         {
             var orderview = Session["orderview"] as OrderView;
 
-            var Artic_Id = int.Parse(Request["Artic_Id"]);
-            if (Artic_Id == 0)
+            var Article_Id = int.Parse(Request["Artic_Id"]);
+            if (Article_Id == 0)
             {
                 var list = db.Article.ToList();
                 list.Add(new ProductOrder { Article_Id = 0, Article_Name = "[Seleccione un Producto...]" });
@@ -159,7 +158,7 @@ namespace SistemaF.Web.Controllers
                 return View(ProductOrder);
             }
 
-            var Article = db.Article.Find(Artic_Id);
+            var Article = db.Article.Find(Article_Id);
             if (Article == null)
             {
                 var list = db.Article.ToList();
@@ -171,7 +170,7 @@ namespace SistemaF.Web.Controllers
                 return View(ProductOrder);
             }
 
-            ProductOrder = orderview.Products.Find(p => p.Article_Id == Artic_Id);
+            ProductOrder = orderview.Products.Find(p => p.Article_Id == Article_Id);
             if (ProductOrder == null)
             {
                 ProductOrder = new ProductOrder
